@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alex Rivera – Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fa;--ink:#13203d;--muted:#5a6579;--line:#d9dee7;--accent:#2a4fff;--accent-ink:#fff;--chip:#e9edf5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10141f;--ink:#eef1f8;--muted:#9aa5ba;--line:#273049;--accent:#7b93ff;--accent-ink:#10141f;--chip:#1b2236;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10141f;--ink:#eef1f8;--muted:#9aa5ba;--line:#273049;--accent:#7b93ff;--accent-ink:#10141f;--chip:#1b2236;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:760px;margin:0 auto;padding:0 1.5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+header.top b{font:700 1rem "Bricolage Grotesque",sans-serif}
+nav{display:flex;gap:1.25rem;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:4.5rem 0 3.5rem}
+h1{font:700 clamp(2.6rem,9vw,4.75rem)/1.02 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0 0 1.5rem;max-width:12ch}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:0 0 2rem}
+.hero p strong{color:var(--ink);font-weight:600}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:8px;font-weight:600;text-decoration:none;border:1px solid var(--line)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font:700 1.6rem "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:0 0 1.5rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.filters button{font:inherit;font-size:.9rem;padding:.35rem .85rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.proj{list-style:none;margin:0;padding:0}
+.proj li{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.proj li[hidden]{display:none}
+.proj h3{margin:0;font:600 1.15rem "Bricolage Grotesque",sans-serif}
+.proj h3 a{text-decoration:none}
+.proj h3 a:hover{color:var(--accent)}
+.proj p{margin:.25rem 0 0;color:var(--muted);grid-column:1}
+.proj .stack{grid-column:2;grid-row:1;align-self:center;font-size:.85rem;color:var(--muted);text-align:right}
+.exp{display:grid;grid-template-columns:8rem 1fr;gap:.25rem 1.5rem;margin-bottom:1.5rem}
+.exp time{color:var(--muted);font-size:.95rem}
+.exp h3{margin:0;font-size:1.05rem;font-weight:600}
+.exp p{margin:.2rem 0 0;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
+.skills li{background:var(--chip);padding:.3rem .8rem;border-radius:6px;font-size:.95rem}
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--muted)}
+footer a{color:var(--ink)}
+@media(max-width:560px){.proj li{grid-template-columns:1fr}.proj .stack{grid-column:1;grid-row:auto;text-align:left}.exp{grid-template-columns:1fr}nav{gap:.9rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><b>Alex Rivera</b><nav><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav></header>
+
+<main>
+<div class="hero">
+<h1>I build fast, dependable software.</h1>
+<p>I’m a full-stack engineer who ships web apps and developer tools. Right now I’m at <strong>Northwind Labs</strong>, working on real-time data pipelines.</p>
+<div class="btns"><a class="btn primary" href="#work">See my work</a><a class="btn" href="mailto:hello@example.com">Email me</a></div>
+</div>
+
+<section id="work">
+<h2>Selected projects</h2>
+<div class="filters" role="group" aria-label="Filter projects by stack">
+<button aria-pressed="true" data-f="all">All</button>
+<button aria-pressed="false" data-f="typescript">TypeScript</button>
+<button aria-pressed="false" data-f="python">Python</button>
+<button aria-pressed="false" data-f="go">Go</button>
+</div>
+<ul class="proj">
+<li data-t="typescript"><h3><a href="#">Tracewell</a></h3><span class="stack">TypeScript, React, Postgres</span><p>A debugging dashboard that groups errors by cause. Used by 40 teams.</p></li>
+<li data-t="go"><h3><a href="#">Queuely</a></h3><span class="stack">Go, Redis</span><p>An open-source job queue with retries and a small, readable codebase. 1.2k GitHub stars.</p></li>
+<li data-t="python"><h3><a href="#">Pricewatch</a></h3><span class="stack">Python, FastAPI</span><p>Tracks product prices across stores and sends an alert when they drop.</p></li>
+<li data-t="typescript"><h3><a href="#">Docsmith</a></h3><span class="stack">TypeScript, Node</span><p>A CLI that turns code comments into searchable documentation sites.</p></li>
+</ul>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="exp"><time>2023 – now</time><div><h3>Senior Engineer, Northwind Labs</h3><p>Lead a team of four building streaming data infrastructure. Cut pipeline latency by 60%.</p></div></div>
+<div class="exp"><time>2020 – 2023</time><div><h3>Software Engineer, Brightpath</h3><p>Built the customer dashboard and API used by 12,000 businesses.</p></div></div>
+<div class="exp"><time>2018 – 2020</time><div><h3>Junior Developer, Studio Kite</h3><p>Shipped client websites and internal tools.</p></div></div>
+<h2 style="margin-top:2.5rem">Tools I use</h2>
+<ul class="skills"><li>TypeScript</li><li>React</li><li>Node.js</li><li>Python</li><li>Go</li><li>PostgreSQL</li><li>Docker</li><li>AWS</li></ul>
+</section>
+</main>
+
+<footer id="contact">
+<h2>Let’s work together</h2>
+<p>I’m open to new projects. Write to <a href="mailto:hello@example.com">hello@example.com</a> or find me on <a href="#">GitHub</a> and <a href="#">LinkedIn</a>.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button'),items=document.querySelectorAll('.proj li');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    var f=b.dataset.f;
+    items.forEach(function(li){li.hidden=!(f==='all'||li.dataset.t===f)});
+  })});
+})();
+</script>
+</body>
+</html>
